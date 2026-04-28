@@ -21,12 +21,11 @@
     <div id="app"></div>
 
     <script>
-        // CONFIGURACIÓN DE CONTACTOS
-        const NUMERO_1 = "13212951424";
-        const NUMERO_2 = "16107140612";
+        // CONFIGURACIÓN DE CONTACTO ÚNICO
+        const NUMERO_WHATSAPP = "13212951424";
         const NOMBRE_NEGOCIO = "La Cocina Bendecida";
 
-        // BASE DE DATOS CON PRECIO DE SOFRITO ACTUALIZADO
+        // BASE DE DATOS
         const PRODUCTOS = [
             // CHEESE DOGS
             { id: 1, nombre: "Cheese Dogs (Pack 6)", precio: 14.00, cat: "Cheese Dogs", desc: "Masa crujiente artesanal con salchicha y queso.", icon: "package" },
@@ -48,7 +47,7 @@
             { id: 9, nombre: "Polvorón KETO Individual", precio: 3.00, cat: "Repostería KETO", desc: "Harina de Almendra, Aceite de Coco y Syrup de Maple.", icon: "cookie" },
             { id: 10, nombre: "Polvorones KETO (Pack 6)", precio: 15.00, cat: "Repostería KETO", desc: "Pack saludable de 6 polvorones.", destacado: true, promo: "Ahorra $3.00", icon: "gift" },
             
-            // SAZONADORES - PRECIO ACTUALIZADO A $9.00
+            // SAZONADORES
             { id: 11, nombre: "Sofrito Casero (32oz)", precio: 9.00, cat: "Sazonadores", desc: "El secreto natural para que tus comidas queden bendecidas.", icon: "flask-conical" }
         ];
 
@@ -176,7 +175,7 @@
                             </div>
                             <div>
                                 <label class="block text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2 ml-4">Notas (Sabores, dirección, etc.)</label>
-                                <textarea id="form-notas" placeholder="Ej. 6 de carne y 6 de pollo..." class="w-full p-5 bg-stone-50 rounded-[1.5rem] border-2 border-transparent focus:border-orange-500 outline-none font-bold text-lg h-24 resize-none"></textarea>
+                                <textarea id="form-notas" placeholder="Ej. 6 de pollo y 6 de queso..." class="w-full p-5 bg-stone-50 rounded-[1.5rem] border-2 border-transparent focus:border-orange-500 outline-none font-bold text-lg h-24 resize-none"></textarea>
                             </div>
                         </div>
                         <div class="bg-stone-900 text-white p-8 rounded-[2rem] mb-8 flex justify-between items-center">
@@ -237,13 +236,7 @@
             msg += `*TOTAL A PAGAR: $${total.toFixed(2)}*\n\n`;
             if (notas) msg += `*NOTAS:* ${notas}`;
 
-            window.open(`https://wa.me/${NUMERO_1}?text=${encodeURIComponent(msg)}`, '_blank');
-            
-            setTimeout(() => {
-                if(confirm("¿Deseas enviar el pedido también al segundo número de contacto?")) {
-                    window.open(`https://wa.me/${NUMERO_2}?text=${encodeURIComponent(msg)}`, '_blank');
-                }
-            }, 1500);
+            window.open(`https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
         render();
@@ -252,3 +245,4 @@
 </html>
 
 ```
+
