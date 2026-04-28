@@ -240,7 +240,7 @@
             
             setTimeout(() => {
                 if(confirm("¿Deseas enviar el pedido también al segundo número de contacto?")) {
-                    window.open(`https://wa.me/${NUMERO_2}?text=${encodeURIComponent(msg)}`, '_blank');
+                    window.open(`https://wa.me/${NUMERO_1}?text=${encodeURIComponent(msg)}`, '_blank');
                 }
             }, 1500);
         }
