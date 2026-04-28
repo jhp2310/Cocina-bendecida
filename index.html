@@ -23,6 +23,7 @@
     <script>
         // CONFIGURACIÓN DE CONTACTOS
         const NUMERO_1 = "13212951424";
+        const NUMERO_2 = "16107140612";
         const NOMBRE_NEGOCIO = "La Cocina Bendecida";
 
         // BASE DE DATOS CON PRECIO DE SOFRITO ACTUALIZADO
@@ -240,7 +241,7 @@
             
             setTimeout(() => {
                 if(confirm("¿Deseas enviar el pedido también al segundo número de contacto?")) {
-                    window.open(`https://wa.me/${NUMERO_1}?text=${encodeURIComponent(msg)}`, '_blank');
+                    window.open(`https://wa.me/${NUMERO_2}?text=${encodeURIComponent(msg)}`, '_blank');
                 }
             }, 1500);
         }
